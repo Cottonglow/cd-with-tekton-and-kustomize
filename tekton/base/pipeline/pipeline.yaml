@@ -1,0 +1,31 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Pipeline
+metadata:
+  name: pipeline-deploy
+  namespace: helloworld
+  labels:
+    app: hello-world
+spec:
+  resources:
+    - name: git-source
+      type: git
+  params:
+    - name: test
+      type: string
+      default: placeholder text
+  tasks:
+    - name: deploy-demo
+      taskRef:
+        name: deploy-using-kustomize
+      resources:
+        inputs:
+          - name: git-source
+            resource: git-source
+    - name: run-additional-task
+      taskRef:
+        name: additional-task
+      params:
+        - name: message
+          value: $(params.ns)
+      runAfter:
+        - deploy-coffeeshop-demo

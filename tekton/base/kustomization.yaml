@@ -1,0 +1,6 @@
+bases:
+  - ./pipeline
+  - ./trigger
+
+resources:
+  - namespace.yaml

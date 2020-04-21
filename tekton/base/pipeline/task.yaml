@@ -1,0 +1,23 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: deploy-using-kustomize
+  namespace: helloworld
+  labels:
+    app: hello-world
+spec:
+  inputs:
+    resources:
+      - name: git-source
+        type: git
+  steps:
+    - name: output-message
+      image: bash
+      command: ["bash", "-c"]
+      args:
+        - echo -e 'Deploying Hello World application...'
+    - name: run-kubectl-apply-k
+      image: bitnami/kubectl
+      command: ["bash", "-c"]
+      args:
+        - kubectl apply -k /workspace/git-source/deploy/overlays

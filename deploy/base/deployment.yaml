@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world-app
+  template:
+    metadata:
+      labels:
+        app: hello-world-app
+    spec:
+      containers:
+      - name: hello-world
+        image: hello-world
+        ports:
+          - containerPort: 8090
+        imagePullPolicy: Always
+        args: ["java", "-jar", "project/hello-world-1.0.0-jar-with-dependencies.jar", "world"]

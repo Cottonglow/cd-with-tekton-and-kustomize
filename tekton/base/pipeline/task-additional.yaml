@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: additional-task
+  namespace: helloworld
+  labels:
+    app: hello-world
+spec:
+  steps:
+    - name: output-message
+      image: bash
+      command: ["bash", "-c"]
+      args:
+        - echo -e 'You can run additional tasks here after the initial task has finished, for example tests.'

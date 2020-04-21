@@ -1,0 +1,6 @@
+resources:
+  - pipeline-resource.yaml
+  - pipeline-roles.yaml
+  - pipeline.yaml
+  - task-additional.yaml
+  - task.yaml

@@ -1,0 +1,6 @@
+resources:
+  - eventlistener.yaml
+  - git-secrets.yaml
+  - ingress.yaml
+  - triggerbindings.yaml
+  - triggertemplate.yaml
