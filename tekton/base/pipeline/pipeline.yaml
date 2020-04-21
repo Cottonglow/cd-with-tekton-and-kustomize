@@ -25,7 +25,7 @@ spec:
       taskRef:
         name: additional-task
       params:
-        - name: message
-          value: $(params.ns)
+        - name: test
+          value: $(params.test)
       runAfter:
-        - deploy-coffeeshop-demo
+        - deploy-demo

@@ -12,7 +12,7 @@ spec:
         generateName: run-deploy-pipeline-
         namespace: monitoring
       spec:
-        serviceAccountName: pipelines
+        serviceAccountName: pipeline
         pipelineRef:
           name: pipeline-deploy
         resources:

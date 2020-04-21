@@ -42,5 +42,5 @@ roleRef:
   name: tekton-trigger-roles
 subjects:
   - kind: ServiceAccount
-    name: pipelines
+    name: pipeline
     namespace: monitoring

@@ -1,6 +1,7 @@
 resources:
   - eventlistener.yaml
-  - git-secrets.yaml
   - ingress.yaml
   - triggerbindings.yaml
   - triggertemplate.yaml
+  - git-secrets.yaml
+  - pipeline-roles.yaml

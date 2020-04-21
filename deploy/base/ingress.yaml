@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-    - host: hello.world.apps.cravats.os.fyre.ibm.com
+    - host: hello.world.apps.examine.os.fyre.ibm.com
       http:
         paths:
           - path: /
