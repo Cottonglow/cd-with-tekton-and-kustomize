@@ -5,5 +5,3 @@ patches:
   - deployment-patch.yaml
 
 namespace: helloworld
-labels:
-    app: hello-world

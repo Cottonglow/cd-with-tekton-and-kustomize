@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
       - name: hello-world
-        args: ["java", "-jar", "project/hello-world-1.0.0-jar-with-dependencies.jar", "test"]
+        args: ["java", "-jar", "target/hello-world-1.0.0-jar-with-dependencies.jar", "test"]

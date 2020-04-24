@@ -9,3 +9,15 @@ spec:
     targetPort: 8090
   selector:
     app: hello-world-app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-service-copy
+spec:
+  ports:
+  - port: 8010
+    protocol: TCP
+    targetPort: 8010
+  selector:
+    app: hello-world-app-copy

@@ -14,3 +14,20 @@ spec:
             backend:
               serviceName: hello-world-service
               servicePort: 8090
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hello-world-ingress-copy
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+    - host: hello.world.copy.apps.examine.os.fyre.ibm.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: hello-world-service-copy
+              servicePort: 8010
